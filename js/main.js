@@ -10,15 +10,14 @@ const listaSpesa = [
     'patate'
 ]
 
+const ul = document.getElementById('list');
 //Inizializzo una variabile indice
 let index = 0;
 
 //Ciclo per estrarre dati da array  
 while (index < listaSpesa.length) {
-    console.log(index);
-    console.log(listaSpesa[index]);
+    const li = document.createElement('li');
+    li.innerHTML = listaSpesa[index];
+    ul.append(li);
     index ++;
 }
-
-//Aggiungo all'HTML l'elemento estratto nella lista
-//Incremento di 1 la variabile indice
