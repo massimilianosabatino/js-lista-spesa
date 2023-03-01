@@ -15,9 +15,19 @@ const ul = document.getElementById('list');
 let index = 0;
 
 //Ciclo per estrarre dati da array  
-while (index < listaSpesa.length) {
+// while (index < listaSpesa.length) {
+//     const li = document.createElement('li');
+//     li.innerHTML = listaSpesa[index];
+//     ul.append(li);
+//     index ++;
+// }
+
+do {
     const li = document.createElement('li');
     li.innerHTML = listaSpesa[index];
+    if (listaSpesa[index] === undefined){
+        li.innerText = 'La lista è vuota';
+    }
     ul.append(li);
     index ++;
-}
+} while (index < listaSpesa.length);
